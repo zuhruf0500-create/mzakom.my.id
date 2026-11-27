@@ -200,6 +200,39 @@ pre.nota{background:var(--isi);padding:12px;border-radius:14px;font-size:.76rem;
   .pesan{bottom:28px;left:calc(50% + 124px)}
   .cepat button{padding:16px 6px 14px;font-size:.84rem}
 }
+/* kemudahan pakai */
+.lipat{margin-top:12px;background:var(--isi);border-radius:14px;padding:0 14px}
+.lipat summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:.88rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.lipat summary::-webkit-details-marker{display:none}
+.lipat summary::after{content:'+';font-size:1.25rem;line-height:1;color:var(--redup)}
+.lipat[open] summary::after{content:'\2212'}
+.lipat[open]{padding-bottom:14px}
+.lipat input,.lipat select,.lipat textarea{background:var(--kartu)}
+.lipat label:first-child{margin-top:0}
+.seg.sub{margin-bottom:12px;overflow-x:auto;scrollbar-width:none;column-span:all}
+.seg.sub::-webkit-scrollbar{display:none}
+.seg.sub button{flex:1 0 auto;border:0;background:none;border-radius:12px;padding:10px 12px;font-weight:600;font-size:.84rem;color:var(--redup);cursor:pointer;white-space:nowrap}
+.seg.sub button[aria-selected=true]{background:var(--kartu);color:var(--teks);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.kosong-blok{text-align:center;padding:26px 12px;color:var(--redup);font-size:.88rem}
+.kosong-blok b{display:block;color:var(--teks);font-size:1rem;margin:12px 0 4px}
+.kosong-blok .baris{justify-content:center;margin-top:16px}
+.kosong-blok .chip-ikon{margin:auto;width:48px;height:48px}
+.grid-produk .kosong-blok{grid-column:1/-1}
+.pilih-jenis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pilih-jenis label{margin:0;display:flex;gap:8px;align-items:center;background:var(--isi);border-radius:14px;padding:12px;font-weight:600;font-size:.84rem;color:var(--teks);cursor:pointer;border:1.5px solid transparent}
+.pilih-jenis label:has(input:checked){border-color:var(--aksen-kuat);background:var(--masuk-bg)}
+.langkah{display:flex;align-items:center;gap:12px;width:100%;border:0;background:none;padding:12px 0;border-bottom:1px solid var(--garis);text-align:left;cursor:pointer;color:var(--teks)}
+.langkah:disabled{cursor:default}
+.langkah .nomor{width:30px;height:30px;border-radius:50%;background:var(--isi);display:grid;place-items:center;font-weight:700;font-size:.85rem;flex:none}
+.langkah .nomor .ic{width:16px;height:16px}
+.langkah.beres .nomor{background:var(--aksen);color:var(--aksen-teks)}
+.langkah.beres b{text-decoration:line-through;color:var(--redup);font-weight:500}
+.langkah small{display:block;color:var(--redup);font-size:.78rem}
+.langkah>.ic{color:var(--redup)}
+.b-mulai{order:0;grid-column:1/-1}
+.judul-langkah{display:flex;align-items:center;gap:8px}
+.judul-langkah span{width:24px;height:24px;border-radius:50%;background:var(--aksen);color:var(--aksen-teks);display:grid;place-items:center;font-size:.78rem;font-weight:700}
+.situasi td:first-child{color:var(--redup);width:46%}
 canvas{width:100%;display:block}
 #cetak{display:none}
 @media print{
@@ -241,7 +274,7 @@ canvas{width:100%;display:block}
   </div>
 </div>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20V11M12 20V5M19 20v-6"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10"/></symbol><symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol><symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.3" fill="currentColor" stroke="none"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 4 3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol><symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-next" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-masuk" viewBox="0 0 24 24"><path d="M17 7 7 17M7 9v8h8"/></symbol><symbol id="i-keluar" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2.5"/><path d="M3 10h18M16 15h2"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6M16 4.3a3.5 3.5 0 0 1 0 7M21.5 20c0-2.8-1.8-4.8-4.5-5.4"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol><symbol id="i-note" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3h0a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8v0a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol><symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V5M7 10l5-5 5 5M5 20h14"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20V11M12 20V5M19 20v-6"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10"/></symbol><symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol><symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.3" fill="currentColor" stroke="none"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 4 3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol><symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-next" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-masuk" viewBox="0 0 24 24"><path d="M17 7 7 17M7 9v8h8"/></symbol><symbol id="i-keluar" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2.5"/><path d="M3 10h18M16 15h2"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6M16 4.3a3.5 3.5 0 0 1 0 7M21.5 20c0-2.8-1.8-4.8-4.5-5.4"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol><symbol id="i-note" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3h0a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8v0a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol><symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V5M7 10l5-5 5 5M5 20h14"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-cek" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol></svg>
 <aside class="samping" id="samping" aria-label="Menu"></aside>
 <header class="atas">
   <div class="avatar" id="avatar"><img id="logoKop" alt="" hidden><span id="inisial"></span></div>
@@ -258,20 +291,24 @@ canvas{width:100%;display:block}
 <section id="v-kasir" hidden>
   <div class="kasir">
     <div class="kartu">
-      <div class="baris"><input id="kCari" placeholder="Cari produk / ketik barcode lalu Enter" style="flex:1" autocomplete="off"><button type="button" class="btn tipis" data-act="scan-kasir"><svg class="ic" aria-hidden="true"><use href="#i-scan"/></svg>Scan</button></div>
+      <h3 class="judul-langkah"><span>1</span>Pilih barang</h3>
+      <div class="baris"><input id="kCari" placeholder="Cari barang atau scan barcode" style="flex:1" autocomplete="off"><button type="button" class="btn tipis" data-act="scan-kasir" aria-label="Scan barcode"><svg class="ic" aria-hidden="true"><use href="#i-scan"/></svg></button></div>
       <div id="kProduk" class="grid-produk"></div>
     </div>
     <div class="kartu">
-      <h3>Keranjang</h3>
+      <h3 class="judul-langkah"><span>2</span>Periksa keranjang</h3>
       <ul class="daftar" id="kKeranjang"></ul>
-      <div class="dua"><div><label for="kPel">Pelanggan</label><select id="kPel"></select></div><div><label for="kKanal">Kanal</label><select id="kKanal"></select></div></div>
-      <div class="tiga"><div><label for="kDisk">Diskon nota</label><input id="kDisk" class="uang" inputmode="numeric" placeholder="Rp"></div><div><label for="kPajak">Pajak %</label><input id="kPajak" inputmode="decimal" placeholder="0"></div><div><label for="kLayan">Layanan %</label><input id="kLayan" inputmode="decimal" placeholder="0"></div></div>
-      <div class="dua"><div><label for="kOngkir">Ongkir</label><input id="kOngkir" class="uang" inputmode="numeric" placeholder="Rp"></div><div><label for="kStatus">Status</label><select id="kStatus"><option value="lunas">Lunas</option><option value="utang">Bayar nanti (utang)</option><option value="pesanan">Pesanan / PO (DP)</option></select></div></div>
-      <div class="dua"><div><label for="kMetode">Metode bayar</label><select id="kMetode"></select></div><div><label for="kDompet">Masuk ke</label><select id="kDompet"></select></div></div>
+      <div class="dua"><div><label for="kPel">Pembeli</label><select id="kPel"></select></div><div><label for="kStatus">Pembayaran</label><select id="kStatus"><option value="lunas">Lunas sekarang</option><option value="utang">Bayar nanti (ngutang)</option><option value="pesanan">Pesanan, bayar DP dulu</option></select></div></div>
+      <div class="dua"><div><label for="kMetode">Cara bayar</label><select id="kMetode"></select></div><div><label for="kDompet">Uang masuk ke</label><select id="kDompet"></select></div></div>
+      <details class="lipat"><summary>Diskon, pajak, ongkir, dijual lewat</summary>
+        <div class="dua"><div><label for="kKanal">Dijual lewat</label><select id="kKanal"></select></div><div><label for="kOngkir">Ongkir</label><input id="kOngkir" class="uang" inputmode="numeric" placeholder="Rp"></div></div>
+        <div class="tiga"><div><label for="kDisk">Diskon</label><input id="kDisk" class="uang" inputmode="numeric" placeholder="Rp"></div><div><label for="kPajak">Pajak %</label><input id="kPajak" inputmode="decimal" placeholder="0"></div><div><label for="kLayan">Layanan %</label><input id="kLayan" inputmode="decimal" placeholder="0"></div></div>
+      </details>
+      <h3 class="judul-langkah" style="margin-top:18px"><span>3</span>Terima uang</h3>
+      <div class="total" style="margin-top:0"><span>Total</span><b id="kTotal">Rp0</b></div>
+      <div class="label" id="kRinci"></div>
       <div id="kBayarBox"><label for="kBayar" id="kBayarLabel">Uang diterima</label><div class="baris"><input id="kBayar" class="uang" inputmode="numeric" style="flex:1" placeholder="Rp"><button type="button" class="btn tipis" data-act="uang-pas">Uang pas</button></div><div class="chip-baris" data-cepat="kBayar"></div></div>
       <div id="kTempoBox" hidden><label for="kTempo">Jatuh tempo / tanggal ambil</label><input type="date" id="kTempo"></div>
-      <div class="total"><span>Total</span><b id="kTotal">Rp0</b></div>
-      <div class="label" id="kRinci"></div>
       <div class="kembali" id="kKembali"></div>
       <button class="btn kuning lebar" type="button" data-act="simpan-nota">Simpan penjualan</button>
     </div>
@@ -280,58 +317,55 @@ canvas{width:100%;display:block}
 
 <section id="v-catat" hidden>
   <form class="kartu" id="fCatat" autocomplete="off">
-    <h2 id="cJudul">Catat transaksi</h2>
+    <h2 id="cJudul" style="margin-top:0" hidden>Ubah transaksi</h2>
     <div class="seg">
       <label><input type="radio" name="cJenis" value="masuk" checked><span>Uang masuk</span></label>
       <label><input type="radio" name="cJenis" value="keluar"><span>Uang keluar</span></label>
-      <label><input type="radio" name="cJenis" value="pindah"><span>Pindah dana</span></label>
+      <label><input type="radio" name="cJenis" value="pindah"><span>Pindah uang</span></label>
     </div>
-    <label for="cNom">Nominal (boleh hitungan, mis. 12.000*3)</label>
-    <div class="baris"><input id="cNom" class="uang" inputmode="numeric" placeholder="0" style="flex:1" required><button type="button" class="btn tipis" data-kalk="cNom" aria-label="Kalkulator"><svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg></button></div>
+    <label for="cNom">Jumlah uang</label>
+    <div class="baris"><input id="cNom" class="uang" inputmode="numeric" placeholder="0" style="flex:1;font-size:1.2rem;font-weight:700" required><button type="button" class="btn tipis" data-kalk="cNom" aria-label="Kalkulator"><svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg></button></div>
     <div class="chip-baris" data-cepat="cNom"></div>
     <div class="dua">
-      <div><label for="cTgl">Tanggal</label><input type="date" id="cTgl" required></div>
-      <div><label for="cJam">Jam</label><input type="time" id="cJam"></div>
-    </div>
-    <div class="dua">
-      <div id="cKatBox"><label for="cKat">Kategori</label><select id="cKat"></select></div>
-      <div><label for="cMetode">Metode</label><select id="cMetode"></select></div>
-    </div>
-    <div class="dua">
+      <div id="cKatBox"><label for="cKat">Untuk apa</label><select id="cKat"></select></div>
       <div><label for="cDompet" id="cDompetLabel">Dompet</label><select id="cDompet"></select></div>
       <div id="cKeBox" hidden><label for="cKe">Ke dompet</label><select id="cKe"></select></div>
     </div>
-    <label for="cKet">Keterangan</label>
-    <input id="cKet" maxlength="140" placeholder="mis. jual 10 bungkus keripik">
-    <label for="cTag">Tag (pisahkan spasi)</label>
-    <input id="cTag" placeholder="#online #reseller">
-    <label for="cFoto">Foto nota / struk</label>
-    <input type="file" id="cFoto" accept="image/*" capture="environment">
-    <img id="cFotoLihat" alt="Foto nota" hidden style="max-width:160px;margin-top:6px;border-radius:8px">
-    <label class="cek"><input type="checkbox" id="cPenting"> Tandai penting</label>
-    <label class="cek" id="cUlangBox"><input type="checkbox" id="cUlang"> Ulangi otomatis tiap bulan (sewa, gaji, cicilan)</label>
-    <div class="baris"><button class="btn" style="flex:1" id="cSimpan">Simpan</button><button type="button" class="btn tipis" id="cBatal" hidden>Batal ubah</button></div>
+    <label for="cKet">Keterangan (boleh kosong)</label>
+    <input id="cKet" maxlength="140">
+    <label for="cTgl">Tanggal</label><input type="date" id="cTgl" required>
+    <details class="lipat"><summary>Pilihan lain: jam, cara bayar, foto nota, tag</summary>
+      <div class="dua"><div><label for="cJam">Jam</label><input type="time" id="cJam"></div><div><label for="cMetode">Cara bayar</label><select id="cMetode"></select></div></div>
+      <label for="cTag">Tag (pisahkan spasi)</label><input id="cTag" placeholder="#online #reseller">
+      <label for="cFoto">Foto nota / struk</label><input type="file" id="cFoto" accept="image/*" capture="environment">
+      <img id="cFotoLihat" alt="Foto nota" hidden style="max-width:160px;margin-top:6px;border-radius:8px">
+      <label class="cek"><input type="checkbox" id="cPenting"> Tandai penting</label>
+      <label class="cek" id="cUlangBox"><input type="checkbox" id="cUlang"> Ulangi otomatis tiap bulan (sewa, gaji, cicilan)</label>
+    </details>
+    <div class="baris" style="margin-top:16px"><button class="btn kuning" style="flex:1" id="cSimpan">Simpan</button><button type="button" class="btn tipis" id="cBatal" hidden>Batal ubah</button></div>
   </form>
 </section>
 
 <section id="v-riwayat" hidden>
   <div class="kartu">
-    <div class="seg" style="margin-bottom:10px">
-      <label><input type="radio" name="rMode" value="trx" checked><span>Transaksi</span></label>
-      <label><input type="radio" name="rMode" value="nota"><span>Nota penjualan</span></label>
-      <label><input type="radio" name="rMode" value="stok"><span>Mutasi stok</span></label>
+    <div class="seg" style="margin-bottom:4px">
+      <label><input type="radio" name="rMode" value="trx" checked><span>Uang</span></label>
+      <label><input type="radio" name="rMode" value="nota"><span>Nota jual</span></label>
+      <label><input type="radio" name="rMode" value="stok"><span>Stok</span></label>
     </div>
     <div class="dua">
       <div><label for="rPeriode">Periode</label><select id="rPeriode" class="periode"></select></div>
-      <div><label for="rCari">Cari</label><input id="rCari" placeholder="keterangan, nama, no nota"></div>
+      <div><label for="rCari">Cari</label><input id="rCari" placeholder="kata kunci"></div>
     </div>
     <div class="dua" id="rBebas" hidden><div><label for="rDari">Dari</label><input type="date" id="rDari"></div><div><label for="rSampai">Sampai</label><input type="date" id="rSampai"></div></div>
-    <div class="tiga" id="rFilterTrx">
-      <div><label for="rJenis">Jenis</label><select id="rJenis"><option value="">Semua</option><option value="masuk">Masuk</option><option value="keluar">Keluar</option><option value="pindah">Pindah</option></select></div>
-      <div><label for="rKat">Kategori</label><select id="rKat"></select></div>
-      <div><label for="rDompet">Dompet</label><select id="rDompet"></select></div>
-    </div>
-    <label class="cek"><input type="checkbox" id="rPenting"> Hanya yang ditandai penting</label>
+    <details class="lipat" id="rFilterTrx"><summary>Saring: jenis, kategori, dompet</summary>
+      <div class="tiga">
+        <div><label for="rJenis">Jenis</label><select id="rJenis"><option value="">Semua</option><option value="masuk">Masuk</option><option value="keluar">Keluar</option><option value="pindah">Pindah</option></select></div>
+        <div><label for="rKat">Kategori</label><select id="rKat"></select></div>
+        <div><label for="rDompet">Dompet</label><select id="rDompet"></select></div>
+      </div>
+      <label class="cek"><input type="checkbox" id="rPenting"> Hanya yang ditandai penting</label>
+    </details>
   </div>
   <div class="kartu"><ul class="daftar" id="rList"></ul></div>
 </section>
@@ -341,15 +375,13 @@ canvas{width:100%;display:block}
 
 <section id="v-laporan" hidden>
   <div class="kartu">
-    <div class="dua">
-      <div><label for="lPeriode">Periode</label><select id="lPeriode" class="periode"></select></div>
-      <div class="baris" style="align-self:end">
-        <button class="btn tipis kecil" type="button" data-act="lap-csv">Excel (CSV)</button>
-        <button class="btn tipis kecil" type="button" data-act="lap-cetak">PDF / Cetak</button>
-        <button class="btn tipis kecil" type="button" data-act="lap-kur">Laporan KUR</button>
-      </div>
-    </div>
+    <label for="lPeriode" style="margin-top:0">Periode laporan</label><select id="lPeriode" class="periode"></select>
     <div class="dua" id="lBebas" hidden><div><label for="lDari">Dari</label><input type="date" id="lDari"></div><div><label for="lSampai">Sampai</label><input type="date" id="lSampai"></div></div>
+    <div class="chip-baris" style="margin-top:12px">
+      <button class="btn tipis kecil" type="button" data-act="lap-cetak"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Simpan PDF / cetak</button>
+      <button class="btn tipis kecil" type="button" data-act="lap-csv"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Excel</button>
+      <button class="btn tipis kecil" type="button" data-act="lap-kur"><svg class="ic" aria-hidden="true"><use href="#i-note"/></svg>Untuk pengajuan KUR</button>
+    </div>
   </div>
   <div id="lapIsi"></div>
 </section>
@@ -435,7 +467,7 @@ const KANAL = ['Toko', 'WhatsApp', 'Shopee', 'Tokopedia', 'TikTok Shop', 'GoFood
 const METODE = ['Tunai', 'Transfer', 'QRIS', 'E-wallet'];
 const KOLEKSI = ['trx', 'produk', 'nota', 'pelanggan', 'pemasok', 'utang', 'stokLog', 'berulang', 'dompet'];
 
-let A = Object.assign({ usaha: [], aktif: null, tema: 'terang', huruf: 'normal', pin: '', sidik: '', modeKasir: false, notif: false, baru: false }, muat('cu-app') || {});
+let A = Object.assign({ usaha: [], aktif: null, tema: 'terang', huruf: 'normal', pin: '', sidik: '', modeKasir: false, notif: false, baru: false, lanjutan: false }, muat('cu-app') || {});
 const simpanA = () => tulis('cu-app', A);
 let D = null;
 
@@ -446,7 +478,7 @@ function dataBaru(nama) {
     katMasuk: [...KAT_MASUK], katKeluar: [...KAT_KELUAR],
     trx: [], produk: [], nota: [], pelanggan: [], pemasok: [], utang: [], stokLog: [], berulang: [],
     anggaran: {}, target: 0, danaDarurat: { dompet: '', target: 0 }, bebanTetap: 0, pajakBadan: false,
-    pajakDefault: 0, layananDefault: 0, seqNota: 0, log: [], hapus: []
+    pajakDefault: 0, layananDefault: 0, seqNota: 0, log: [], hapus: [], jenisUsaha: 'lain', mulaiTutup: false
   };
 }
 function lengkapi(d) {
@@ -458,6 +490,32 @@ function lengkapi(d) {
   return d;
 }
 const kunciU = i => 'cu-u-' + i;
+const PRESET = {
+  fashion: { label: 'Toko baju / fashion', nama: 'Kaos Polos', varian: 'Hitam – M', ukuran: 'S, M, L, XL', warna: 'Hitam, Putih', satuan: 'pcs', lacak: true, katM: [], katK: ['Kulakan / stok', 'Ongkir', 'Jahit / permak', 'Kemasan'], ket: 'mis. jual 2 kaos ke Bu Rina' },
+  makanan: { label: 'Makanan & minuman', nama: 'Keripik Singkong', varian: 'Pedas', ukuran: '', warna: 'Pedas, Original', satuan: 'pcs', lacak: true, katM: [], katK: ['Bahan baku', 'Gas & bahan bakar', 'Kemasan'], ket: 'mis. jual 10 bungkus keripik' },
+  warung: { label: 'Warung / toko kelontong', nama: 'Indomie Goreng', varian: '', ukuran: '', warna: '', satuan: 'pcs', lacak: true, katM: [], katK: ['Kulakan / stok'], ket: 'mis. jual rokok dan minuman' },
+  jasa: { label: 'Jasa (salon, servis, laundry)', nama: 'Potong rambut', varian: 'Dewasa', ukuran: '', warna: '', satuan: 'kali', lacak: false, katM: ['Jasa'], katK: ['Peralatan'], ket: 'mis. servis HP Pak Andi' },
+  lain: { label: 'Usaha lainnya', nama: 'Nama barang', varian: '', ukuran: '', warna: '', satuan: 'pcs', lacak: true, katM: [], katK: [], ket: 'mis. jual 3 barang' }
+};
+const preset = () => PRESET[D && D.jenisUsaha] || PRESET.lain;
+function terapkanJenis(j) {
+  D.jenisUsaha = PRESET[j] ? j : 'lain'; const p = preset();
+  D.katMasuk = [...new Set([...p.katM, ...D.katMasuk])]; D.katKeluar = [...new Set([...p.katK, ...D.katKeluar])];
+}
+const tampilBahan = () => D.jenisUsaha === 'makanan' || A.lanjutan || D.produk.some(p => p.jenis === 'bahan');
+const kosongBlok = (ikon, judul, sub, tombol = '') => `<div class="kosong-blok"><span class="chip-ikon lime">${ic(ikon)}</span><b>${judul}</b><div>${sub}</div>${tombol ? `<div class="baris">${tombol}</div>` : ''}</div>`;
+const subAktif = {};
+function pasangSub(sec, grup) {
+  const el = $('#' + sec), kartu = $$('[data-grup]', el), ada = grup.filter(([g]) => kartu.some(k => k.dataset.grup === g && (A.lanjutan || k.dataset.lanjut === undefined)));
+  if (!ada.length) return;
+  let a = subAktif[sec]; if (!ada.some(x => x[0] === a)) a = ada[0][0];
+  const bar = document.createElement('div'); bar.className = 'seg sub'; bar.setAttribute('role', 'tablist');
+  bar.innerHTML = ada.map(([g, l]) => `<button type="button" role="tab" data-sub="${g}">${l}</button>`).join('');
+  el.prepend(bar);
+  const terap = g => { subAktif[sec] = g; $$('[data-sub]', bar).forEach(b => b.setAttribute('aria-selected', b.dataset.sub === g)); kartu.forEach(k => k.hidden = k.dataset.grup !== g || (!A.lanjutan && k.dataset.lanjut !== undefined)); };
+  bar.onclick = e => { const b = e.target.closest('[data-sub]'); if (b) terap(b.dataset.sub); };
+  terap(a);
+}
 function bukaUsaha(i) { A.aktif = i; simpanA(); D = lengkapi(muat(kunciU(i)) || dataBaru()); }
 const simpan = () => tulis(kunciU(A.aktif), D);
 const tandai = o => (o.u = Date.now(), o);
@@ -658,6 +716,16 @@ function saranOtomatis() {
 }
 let mingguGeser = 0, hariPilih = null;
 const NAMA_HARI = ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'];
+function langkahMulai() {
+  const pr = preset(), jasa = D.jenisUsaha === 'jasa';
+  return [
+    { j: 'Isi profil toko', s: 'Nama, alamat, nomor WA, dan logo untuk nota', ok: !!(D.profil.alamat || D.profil.wa || D.profil.logo), a: 'data-act="buka-sub" data-ke="atur" data-sub="toko"' },
+    { j: 'Isi jumlah uang hari ini', s: 'Uang di laci, rekening bank, atau e-wallet', ok: D.dompet.some(d => d.saldoAwal > 0) || D.dompet.length > 1, a: 'data-act="buka-sub" data-ke="alat" data-sub="uang"' },
+    { j: jasa ? 'Tambah daftar layanan' : 'Tambah barang dagangan', s: 'Contoh: ' + pr.nama + (pr.ukuran ? '. Banyak ukuran bisa sekaligus' : ''), ok: D.produk.some(p => p.jenis === 'jual'), a: 'data-act="produk-baru"' },
+    { j: 'Catat penjualan pertama', s: 'Lewat menu Kasir', ok: D.nota.length > 0 || D.trx.some(t => t.jenis === 'masuk'), a: 'data-tab="kasir"' },
+    { j: 'Catat pengeluaran pertama', s: 'Misalnya ongkir, plastik, atau listrik', ok: D.trx.some(t => t.jenis === 'keluar'), a: 'data-act="cepat-keluar"' }
+  ];
+}
 function infoBaris(ikon, warna, judul, sub, aksi) {
   return `<div class="info"><span class="chip-ikon ${warna}">${ic(ikon)}</span><div class="isi">${judul}${sub ? `<small>${sub}</small>` : ''}</div>${aksi || ''}</div>`;
 }
@@ -681,7 +749,11 @@ R.beranda = () => {
     ...saranOtomatis().map(x => infoBaris('bulb', '', x, ''))
   ].filter(Boolean);
   const akhir = [...D.trx].sort(urutTrx).slice(0, 5);
-  $('#v-beranda').innerHTML = `
+  const L = langkahMulai(), nOk = L.filter(x => x.ok).length;
+  const mulaiHTML = !D.mulaiTutup && nOk < L.length ? `<div class="kartu b-mulai"><div class="baris"><div class="isi"><h3 style="margin:0">Langkah memulai</h3><span class="label">${nOk} dari ${L.length} selesai, sekitar 10 menit</span></div><button class="btn tipis kecil" type="button" data-act="buka-sub" data-ke="atur" data-sub="bantuan">Cara pakai</button></div><div class="bar"><i style="width:${nOk / L.length * 100}%"></i></div>
+    <div style="margin-top:6px">${L.map((x, i) => `<button type="button" class="langkah ${x.ok ? 'beres' : ''}" ${x.ok ? 'disabled' : x.a}><span class="nomor">${x.ok ? ic('cek') : i + 1}</span><span class="isi"><b>${x.j}</b><small>${x.s}</small></span>${x.ok ? '' : ic('next')}</button>`).join('')}</div>
+    <button class="btn tipis kecil" type="button" data-act="tutup-mulai" style="margin-top:10px">Sembunyikan</button></div>` : '';
+  $('#v-beranda').innerHTML = mulaiHTML + `
     <div class="kol"><div class="hero b-hero">
       <div class="isi"><small>${ic('chart', 'kecil')}Laba ${namaBln(b)}</small><div class="angka">${rp(rbln.laba)}</div><div class="ket">Masuk ${rp(rbln.omzet)} · biaya ${rp(rbln.biaya)}</div></div>
       <div class="cincin" aria-label="${pakaiTarget ? pc + '% target omzet' : runtun + ' hari mencatat'}"><svg viewBox="0 0 92 92"><circle cx="46" cy="46" r="38" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="9"/><circle cx="46" cy="46" r="38" fill="none" stroke="#5f9a12" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${(C * (1 - pc / 100)).toFixed(1)}"/><circle cx="46" cy="46" r="30" fill="#fff"/></svg><span>${pakaiTarget ? pc + '%' : runtun}<small>${pakaiTarget ? 'target' : 'hari'}</small></span></div>
@@ -723,6 +795,7 @@ function itemTrx(t) {
 let editId = null;
 function jenisCatat() { return $('[name=cJenis]:checked').value; }
 R.catat = () => {
+  $('#cKet').placeholder = preset().ket;
   const j = jenisCatat(), kat = $('#cKat'), lama = kat.value;
   kat.innerHTML = opsi(j === 'masuk' ? D.katMasuk : D.katKeluar, lama);
   $('#cKatBox').hidden = j === 'pindah'; $('#cKeBox').hidden = j !== 'pindah';
@@ -744,7 +817,7 @@ function siapCatat(jenis, isi = {}, edit = null) {
   if (isi.dompet) $('#cDompet').value = isi.dompet;
   if (isi.keDompet) $('#cKe').value = isi.keDompet;
   $('#cMetode').value = isi.metode || 'Tunai';
-  $('#cJudul').textContent = edit ? 'Ubah transaksi' : 'Catat transaksi';
+  $('#cJudul').hidden = !edit;
   $('#cSimpan').textContent = edit ? 'Simpan perubahan' : 'Simpan';
   $('#cBatal').hidden = !edit;
   if (edit && isi.foto) idb.get('foto', edit).then(f => { if (f) { $('#cFotoLihat').src = f; $('#cFotoLihat').hidden = false; } });
@@ -879,7 +952,8 @@ function renderKasirProduk() {
   const q = $('#kCari').value.toLowerCase().trim();
   const daftar = D.produk.filter(p => p.jenis === 'jual' && (!q || namaProd(p).toLowerCase().includes(q) || (p.barcode || '') === q));
   $('#kProduk').innerHTML = daftar.length ? daftar.map(p => `<button type="button" data-act="ke-keranjang" data-id="${p.id}"><b>${esc(namaProd(p))}</b><span class="label">${rp(p.harga)}${p.lacak && !pakaiResep(p) ? ` · stok ${p.stok}` : ''}</span></button>`).join('')
-    : `<p class="label">${D.produk.length ? 'Produk tidak ditemukan.' : 'Belum ada produk. Tambahkan di tab Produk, atau catat penjualan manual lewat tombol + Masuk.'}</p>`;
+    : D.produk.some(p => p.jenis === 'jual') ? '<p class="label">Barang tidak ditemukan.</p>'
+    : kosongBlok('box', 'Belum ada barang', 'Tambahkan barang yang Anda jual supaya bisa dipilih di sini.', `<button class="btn" type="button" data-act="produk-baru">${ic('plus')}Tambah barang</button><button class="btn tipis" type="button" data-act="cepat-masuk">Catat tanpa barang</button>`);
 }
 function keKeranjang(pid, qty = 1) {
   const p = prod(pid); if (!p) return;
@@ -1069,62 +1143,78 @@ $$('[name=rMode]').forEach(r => r.onchange = R.riwayat);
 /* ================= PRODUK & STOK ================= */
 let fProd = { jenis: 'jual', q: '' };
 R.produk = () => {
+  const bahanOk = tampilBahan(); if (!bahanOk) fProd.jenis = 'jual';
   const list = D.produk.filter(p => p.jenis === fProd.jenis && (!fProd.q || namaProd(p).toLowerCase().includes(fProd.q))).sort((a, b) => namaProd(a).localeCompare(namaProd(b)));
-  const grup = {}; list.forEach(p => (grup[p.nama] = grup[p.nama] || []).push(p));
-  const tipis = stokTipis();
+  const tipis = stokTipis(), pr = preset(), adaJual = D.produk.some(p => p.jenis === 'jual');
   $('#v-produk').innerHTML = `
-    <div class="grid"><div class="kartu"><div class="label">Nilai persediaan (harga modal)</div><div class="angka">${rp(nilaiPersediaan())}</div></div><div class="kartu"><div class="label">Jumlah produk / bahan</div><div class="angka">${D.produk.filter(p => p.jenis === 'jual').length} / ${D.produk.filter(p => p.jenis === 'bahan').length}</div></div><div class="kartu"><div class="label">Stok menipis</div><div class="angka ${tipis.length ? 'keluar' : ''}">${tipis.length}</div></div></div>
+    ${D.produk.length ? `<div class="grid"><div class="kartu"><div class="label">Nilai stok (harga modal)</div><div class="angka">${rp(nilaiPersediaan())}</div></div><div class="kartu"><div class="label">Jumlah barang</div><div class="angka">${D.produk.filter(p => p.jenis === 'jual').length}</div></div><div class="kartu"><div class="label">Stok menipis</div><div class="angka ${tipis.length ? 'keluar' : ''}">${tipis.length}</div></div></div>` : ''}
     <div class="kartu">
-      <div class="baris" style="margin-bottom:10px">
-        <button class="btn" type="button" data-act="produk-baru">+ Produk / bahan</button>
+      <div class="baris">
+        <button class="btn kuning" type="button" data-act="produk-baru">${ic('plus')}Tambah barang</button>
         <button class="btn tipis" type="button" data-act="kulakan">${ic('truck')}Beli stok</button>
-        <button class="btn tipis" type="button" data-act="opname">${ic('clipboard')}Stok opname</button>
-        <button class="btn tipis" type="button" data-act="rusak">${ic('trash')}Rusak / kedaluwarsa</button>
       </div>
-      <div class="dua"><div class="seg"><label><input type="radio" name="pJenis" value="jual" ${fProd.jenis === 'jual' ? 'checked' : ''}><span>Dijual</span></label><label><input type="radio" name="pJenis" value="bahan" ${fProd.jenis === 'bahan' ? 'checked' : ''}><span>Bahan baku</span></label></div><input id="pCari" placeholder="Cari produk" value="${esc(fProd.q)}"></div>
+      ${D.produk.length ? `<div class="baris" style="margin-top:12px">${bahanOk ? `<div class="seg" style="flex:1;min-width:220px"><label><input type="radio" name="pJenis" value="jual" ${fProd.jenis === 'jual' ? 'checked' : ''}><span>Barang dijual</span></label><label><input type="radio" name="pJenis" value="bahan" ${fProd.jenis === 'bahan' ? 'checked' : ''}><span>Bahan baku</span></label></div>` : ''}<input id="pCari" placeholder="Cari barang" value="${esc(fProd.q)}" style="flex:1;min-width:160px"></div>
+      <details class="lipat"><summary>Hitung stok fisik, barang rusak / hilang</summary><div class="baris"><button class="btn tipis kecil" type="button" data-act="opname" style="background:var(--kartu)">${ic('clipboard')}Hitung stok (opname)</button><button class="btn tipis kecil" type="button" data-act="rusak" style="background:var(--kartu)">${ic('trash')}Barang rusak / hilang</button></div></details>` : ''}
     </div>
-    <div class="kartu"><ul class="daftar">${list.length ? Object.entries(grup).map(([nm, ps]) => ps.map(p => {
+    <div class="kartu">${list.length ? `<ul class="daftar">${list.map(p => {
       const m = modalProd(p), mg = p.harga ? Math.round((p.harga - m) / p.harga * 100) : null, tp = p.lacak && !pakaiResep(p) && (p.stok || 0) <= (p.minStok || 0);
-      return `<li><div class="isi"><b>${esc(namaProd(p))}</b><span class="label">${p.jenis === 'jual' ? `Jual ${rp(p.harga)}${p.hargaGrosir ? ` · grosir ${rp(p.hargaGrosir)} (≥${p.minGrosir || 1})` : ''} · ` : ''}modal ${rp(m)}/${esc(p.satuan || 'pcs')}${mg !== null && p.jenis === 'jual' ? ` · margin <b class="${mg < 15 ? 'keluar' : 'masuk'}">${mg}%</b>` : ''}${pakaiResep(p) ? ' · pakai resep' : ''}${p.barcode ? ' · ' + esc(p.barcode) : ''}</span></div>
-        ${p.lacak && !pakaiResep(p) ? `<span class="${tp ? 'keluar' : ''}" style="white-space:nowrap">${p.stok} ${esc(p.satuan || '')}</span>` : ''}
+      return `<li><div class="isi"><b>${esc(namaProd(p))}</b><span class="label">${p.jenis === 'jual' ? `Jual ${rp(p.harga)} · ` : ''}modal ${rp(m)}${mg !== null && p.jenis === 'jual' ? ` · untung <b class="${mg < 15 ? 'keluar' : 'masuk'}">${mg}%</b>` : ''}${p.hargaGrosir ? ` · grosir ${rp(p.hargaGrosir)}` : ''}${pakaiResep(p) ? ' · pakai resep' : ''}</span></div>
+        ${p.lacak && !pakaiResep(p) ? `<span class="${tp ? 'keluar' : ''}" style="white-space:nowrap;font-weight:600">${p.stok} ${esc(p.satuan || '')}</span>` : ''}
         <button class="aksi" type="button" data-act="ubah-produk" data-id="${p.id}" aria-label="Ubah">${ic('edit')}</button></li>`;
-    }).join('')).join('') : `<li class="kosong">${fProd.jenis === 'jual' ? 'Belum ada produk dijual.' : 'Belum ada bahan baku. Bahan baku dipakai untuk menghitung HPP produk olahan.'}</li>`}</ul></div>`;
+    }).join('')}</ul>` : fProd.q ? '<p class="label">Barang tidak ditemukan.</p>'
+      : fProd.jenis === 'bahan' ? kosongBlok('box', 'Belum ada bahan baku', 'Bahan baku dipakai untuk menghitung modal produk olahan (resep). Contoh: tepung, minyak, plastik.', `<button class="btn" type="button" data-act="produk-baru">${ic('plus')}Tambah bahan</button>`)
+      : kosongBlok('box', adaJual ? 'Barang tidak ditemukan' : 'Belum ada barang', `Contoh: ${esc(pr.nama)}${pr.ukuran ? '. Punya banyak ukuran atau warna? Bisa dibuat sekaligus.' : '.'}`, `<button class="btn" type="button" data-act="produk-baru">${ic('plus')}Tambah barang pertama</button>`)}</div>`;
   $$('[name=pJenis]').forEach(r => r.onchange = () => { fProd.jenis = r.value; R.produk(); });
-  $('#pCari').oninput = e => { fProd.q = e.target.value.toLowerCase(); const pos = e.target.selectionStart; R.produk(); $('#pCari').focus(); $('#pCari').setSelectionRange(pos, pos); };
+  if ($('#pCari')) $('#pCari').oninput = e => { fProd.q = e.target.value.toLowerCase(); const pos = e.target.selectionStart; R.produk(); $('#pCari').focus(); $('#pCari').setSelectionRange(pos, pos); };
 };
 function barisResep(r = {}) {
   const bahan = D.produk.filter(p => p.jenis === 'bahan');
   return `<div class="baris resep-baris" style="margin-bottom:6px"><select name="rb" style="flex:2">${opsi(bahan.map(b => [b.id, b.nama + ' (' + rp(b.modal) + '/' + (b.satuan || 'pcs') + ')']), r.id)}</select><input name="rq" inputmode="decimal" value="${r.qty || ''}" placeholder="takaran" style="flex:1"><button type="button" class="aksi" data-act="hapus-resep" aria-label="Hapus bahan">${ic('x')}</button></div>`;
 }
 function formProduk(p) {
-  const baru = !p; p = p || { jenis: fProd.jenis, lacak: true, stok: 0, minStok: 0, satuan: 'pcs', resep: [] };
-  const adaBahan = D.produk.some(x => x.jenis === 'bahan');
-  dialog(baru ? 'Produk baru' : 'Ubah produk', `
-    <div class="seg"><label><input type="radio" name="jenis" value="jual" ${p.jenis === 'jual' ? 'checked' : ''}><span>Dijual</span></label><label><input type="radio" name="jenis" value="bahan" ${p.jenis === 'bahan' ? 'checked' : ''}><span>Bahan baku</span></label></div>
-    <div class="dua"><div><label>Nama</label><input name="nama" required value="${esc(p.nama || '')}" placeholder="Keripik Singkong" autofocus></div><div><label>Varian (ukuran/rasa/warna)</label><input name="varian" value="${esc(p.varian || '')}" placeholder="Pedas, 250 gr"></div></div>
-    <div class="dua"><div><label>Satuan</label><input name="satuan" value="${esc(p.satuan || 'pcs')}" placeholder="pcs, kg, liter"></div><div><label>Barcode</label><div class="baris"><input name="barcode" id="fpBarcode" value="${esc(p.barcode || '')}" style="flex:1"><button type="button" class="btn tipis kecil" data-act="scan-produk" aria-label="Scan barcode">${ic('scan')}</button></div></div></div>
-    <div class="jual-saja"><div class="dua"><div><label>Harga jual</label><input name="harga" class="uang" inputmode="numeric" value="${p.harga ? rb(p.harga) : ''}"></div><div><label>Harga grosir / reseller</label><input name="hargaGrosir" class="uang" inputmode="numeric" value="${p.hargaGrosir ? rb(p.hargaGrosir) : ''}"></div></div>
-    <label>Harga grosir berlaku mulai beli (jumlah)</label><input name="minGrosir" inputmode="decimal" value="${p.minGrosir || ''}" placeholder="mis. 10"></div>
-    <label>Harga modal per satuan ${p.jenis === 'jual' ? '(kosongkan jika pakai resep)' : ''}</label><input name="modal" class="uang" inputmode="numeric" value="${p.modal ? rb(p.modal) : ''}">
-    <div class="jual-saja"><details ${pakaiResep(p) ? 'open' : ''} style="margin-top:10px"><summary><b>Resep / bahan (hitung HPP produk olahan)</b></summary>
-      ${adaBahan ? `<p class="label">Isi bahan baku yang dipakai untuk 1 ${esc(p.satuan || 'pcs')} produk. Stok bahan otomatis berkurang saat produk terjual.</p><div id="resepIsi">${(p.resep || []).map(barisResep).join('')}</div><button type="button" class="btn tipis kecil" data-act="tambah-resep">+ Bahan</button>` : '<p class="label">Tambahkan dulu bahan baku (pilih "Bahan baku" saat membuat produk), lalu kembali ke sini.</p>'}
-    </details>
-    <div class="kartu" style="margin-top:10px;background:var(--bg)"><div class="baris"><span class="isi">HPP / modal: <b id="fpHpp">-</b></span><span>Laba/unit: <b id="fpLaba">-</b></span></div>
-      <div class="baris" style="margin-top:6px"><label style="margin:0">Target untung</label><input id="fpTarget" inputmode="decimal" value="${p.targetMargin || 30}" style="width:70px">%<span class="isi">→ saran harga <b id="fpSaran">-</b></span><button type="button" class="btn tipis kecil" data-act="pakai-saran">Pakai</button></div></div></div>
-    <label class="cek"><input type="checkbox" name="lacak" ${p.lacak ? 'checked' : ''}> Hitung stok otomatis</label>
-    <div class="dua"><div><label>Stok sekarang</label><input name="stok" inputmode="decimal" value="${p.stok ?? 0}"></div><div><label>Peringatan jika stok ≤</label><input name="minStok" inputmode="decimal" value="${p.minStok ?? 0}"></div></div>
-    ${baru ? '' : `<p><button type="button" class="btn merah kecil" data-act="hapus-produk" data-id="${p.id}">Hapus produk</button></p>`}`,
+  const baru = !p, pr = preset();
+  p = p || { jenis: tampilBahan() ? fProd.jenis : 'jual', lacak: pr.lacak, stok: 0, minStok: 0, satuan: pr.satuan, resep: [] };
+  const adaBahan = D.produk.some(x => x.jenis === 'bahan'), bahanOk = tampilBahan() || p.jenis === 'bahan', resepOk = tampilBahan() || pakaiResep(p);
+  dialog(baru ? 'Tambah barang' : 'Ubah barang', `
+    ${bahanOk ? `<div class="seg" style="margin-bottom:4px"><label><input type="radio" name="jenis" value="jual" ${p.jenis === 'jual' ? 'checked' : ''}><span>Barang dijual</span></label><label><input type="radio" name="jenis" value="bahan" ${p.jenis === 'bahan' ? 'checked' : ''}><span>Bahan baku</span></label></div>` : '<input type="hidden" name="jenis" value="jual">'}
+    <label>Nama barang</label><input name="nama" required value="${esc(p.nama || '')}" placeholder="${esc(pr.nama)}" autofocus>
+    <div class="dua"><div class="jual-saja"><label>Harga jual</label><input name="harga" class="uang" inputmode="numeric" value="${p.harga ? rb(p.harga) : ''}" placeholder="Rp"></div><div><label>Modal / harga beli</label><input name="modal" class="uang" inputmode="numeric" value="${p.modal ? rb(p.modal) : ''}" placeholder="Rp"></div></div>
+    <p class="label jual-saja" style="margin:8px 2px 0">Modal <b id="fpHpp">-</b> · untung per barang <b id="fpLaba">-</b></p>
+    <div class="dua"><div><label>Stok sekarang</label><input name="stok" inputmode="decimal" value="${p.stok ?? 0}"></div><div><label>Ingatkan bila stok tinggal</label><input name="minStok" inputmode="decimal" value="${p.minStok ?? 0}"></div></div>
+    <label class="cek"><input type="checkbox" name="lacak" ${p.lacak ? 'checked' : ''}> Kurangi stok otomatis saat terjual</label>
+    <label>Varian (ukuran / warna / rasa, boleh kosong)</label><input name="varian" value="${esc(p.varian || '')}" placeholder="${esc(pr.varian || 'mis. Merah, 250 gr')}">
+    ${baru ? `<details class="lipat jual-saja" ${pr.ukuran ? 'open' : ''}><summary>Banyak ukuran / warna? Buat sekaligus</summary>
+      <label>Ukuran (pisahkan koma)</label><input name="vUkuran" placeholder="${esc(pr.ukuran || 'S, M, L, XL')}">
+      <label>Warna / rasa (pisahkan koma)</label><input name="vWarna" placeholder="${esc(pr.warna || 'Hitam, Putih')}">
+      <p class="label" id="fpVarInfo" style="margin:8px 0 0">Kosongkan jika hanya satu jenis.</p></details>` : ''}
+    <details class="lipat jual-saja"><summary>Harga grosir / reseller</summary>
+      <div class="dua"><div><label>Harga grosir</label><input name="hargaGrosir" class="uang" inputmode="numeric" value="${p.hargaGrosir ? rb(p.hargaGrosir) : ''}" placeholder="Rp"></div><div><label>Berlaku mulai beli</label><input name="minGrosir" inputmode="decimal" value="${p.minGrosir || ''}" placeholder="mis. 6"></div></div>
+      <p class="label" style="margin:8px 0 0">Harga grosir otomatis dipakai di Kasir bila jumlah beli cukup, atau pembeli ditandai reseller.</p></details>
+    <details class="lipat jual-saja"><summary>Bantu tentukan harga jual</summary>
+      <div class="baris"><span>Ingin untung</span><input id="fpTarget" inputmode="decimal" value="${p.targetMargin || 30}" style="width:70px">%<span class="isi">→ harga <b id="fpSaran">-</b></span><button type="button" class="btn tipis kecil" data-act="pakai-saran" style="background:var(--kartu)">Pakai</button></div></details>
+    ${resepOk ? `<details class="lipat jual-saja" ${pakaiResep(p) ? 'open' : ''}><summary>Resep bahan (hitung modal otomatis)</summary>
+      ${adaBahan ? `<p class="label" style="margin-top:0">Bahan baku untuk 1 ${esc(p.satuan || 'pcs')}. Stok bahan berkurang saat barang terjual. Kosongkan kolom Modal di atas.</p><div id="resepIsi">${(p.resep || []).map(barisResep).join('')}</div><button type="button" class="btn tipis kecil" data-act="tambah-resep" style="background:var(--kartu)">+ Bahan</button>` : '<p class="label" style="margin-top:0">Tambahkan dulu bahan baku (pilih "Bahan baku" di atas), lalu kembali ke sini.</p>'}
+    </details>` : ''}
+    <details class="lipat"><summary>Satuan & barcode</summary>
+      <div class="dua"><div><label>Satuan</label><input name="satuan" value="${esc(p.satuan || 'pcs')}" placeholder="pcs, kg, porsi"></div><div><label>Barcode</label><div class="baris"><input name="barcode" id="fpBarcode" value="${esc(p.barcode || '')}" style="flex:1"><button type="button" class="btn tipis kecil" data-act="scan-produk" aria-label="Scan barcode" style="background:var(--kartu)">${ic('scan')}</button></div></div></div></details>
+    ${baru ? '' : `<p style="margin-top:14px"><button type="button" class="btn merah kecil" data-act="hapus-produk" data-id="${p.id}">Hapus barang</button></p>`}`,
     {
       onOk: fd => {
-        if (!fd.get('nama').trim()) { pesan('Nama wajib diisi'); return false; }
+        if (!fd.get('nama').trim()) { pesan('Nama barang wajib diisi'); return false; }
+        const jenis = fd.get('jenis') || 'jual';
         const resep = $$('.resep-baris', $('#dlgIsi')).map(r => ({ id: $('[name=rb]', r).value, qty: desimal($('[name=rq]', r).value) })).filter(r => r.id && r.qty > 0);
+        const isi = { jenis, nama: fd.get('nama').trim(), satuan: (fd.get('satuan') || '').trim() || 'pcs', barcode: (fd.get('barcode') || '').trim(), harga: angka(fd.get('harga')), hargaGrosir: angka(fd.get('hargaGrosir')), minGrosir: desimal(fd.get('minGrosir')), modal: angka(fd.get('modal')), resep: jenis === 'jual' ? resep : [], lacak: !!fd.get('lacak'), minStok: desimal(fd.get('minStok')), targetMargin: desimal($('#fpTarget').value) };
+        const stokBaru = desimal(fd.get('stok')), kombo = baru ? kombinasiVarian(fd.get('vUkuran'), fd.get('vWarna')) : [];
+        if (kombo.length) {
+          kombo.forEach(v => D.produk.push(tandai({ id: id(), ...isi, varian: v, stok: stokBaru })));
+          catatLog(`Tambah ${kombo.length} varian ${isi.nama}`); simpan(); rerender(); pesan(`${kombo.length} varian ${isi.nama} dibuat`); return;
+        }
         const o = baru ? { id: id() } : p;
-        Object.assign(o, { jenis: fd.get('jenis'), nama: fd.get('nama').trim(), varian: fd.get('varian').trim(), satuan: fd.get('satuan').trim() || 'pcs', barcode: fd.get('barcode').trim(), harga: angka(fd.get('harga')), hargaGrosir: angka(fd.get('hargaGrosir')), minGrosir: desimal(fd.get('minGrosir')), modal: angka(fd.get('modal')), resep: fd.get('jenis') === 'jual' ? resep : [], lacak: !!fd.get('lacak'), minStok: desimal(fd.get('minStok')), targetMargin: desimal($('#fpTarget').value) });
-        const stokBaru = desimal(fd.get('stok'));
+        Object.assign(o, isi, { varian: fd.get('varian').trim() });
         if (!baru && o.lacak && stokBaru !== (p.stok || 0)) logStok(o, +(stokBaru - (p.stok || 0)).toFixed(3), 'Koreksi manual');
         o.stok = stokBaru;
         tandai(o); if (baru) D.produk.push(o);
-        catatLog(`${baru ? 'Tambah' : 'Ubah'} produk ${namaProd(o)}`); simpan(); rerender(); pesan('Produk tersimpan');
+        catatLog(`${baru ? 'Tambah' : 'Ubah'} barang ${namaProd(o)}`); simpan(); rerender(); pesan('Barang tersimpan');
       }
     });
   const hitungHpp = () => {
@@ -1132,11 +1222,18 @@ function formProduk(p) {
     const resep = $$('.resep-baris', d).map(r => ({ id: $('[name=rb]', r).value, qty: desimal($('[name=rq]', r).value) })).filter(r => r.qty > 0);
     const m = resep.length ? jml(resep, r => { const b = prod(r.id); return b ? (b.modal || 0) * r.qty : 0; }) : angka($('[name=modal]', d).value);
     const h = angka($('[name=harga]', d).value), t = desimal($('#fpTarget').value);
-    $('#fpHpp').textContent = rp(m); $('#fpLaba').textContent = h ? rp(h - m) + (h ? ` (${Math.round((h - m) / h * 100)}%)` : '') : '-';
+    $('#fpHpp').textContent = rp(m); $('#fpLaba').textContent = h ? rp(h - m) + ` (${Math.round((h - m) / h * 100)}%)` : '-';
     const saran = t < 100 ? Math.ceil(m / (1 - t / 100) / 500) * 500 : 0; $('#fpSaran').textContent = m ? rp(saran) : '-'; $('#fpSaran').dataset.v = saran;
-    $$('.jual-saja', d).forEach(x => x.hidden = $('[name=jenis]:checked', d).value !== 'jual');
+    const j = ($('[name=jenis]:checked', d) || $('[name=jenis]', d)).value;
+    $$('.jual-saja', d).forEach(x => x.hidden = j !== 'jual');
+    if ($('#fpVarInfo')) { const k = kombinasiVarian($('[name=vUkuran]', d).value, $('[name=vWarna]', d).value); $('#fpVarInfo').textContent = k.length ? `Akan dibuat ${k.length} barang: ${k.slice(0, 6).join(', ')}${k.length > 6 ? ', …' : ''}. Kolom Varian di atas diabaikan.` : 'Kosongkan jika hanya satu jenis.'; }
   };
   $('#dlgIsi').oninput = hitungHpp; $('#dlgIsi').onchange = hitungHpp; hitungHpp();
+}
+function kombinasiVarian(uk, wr) {
+  const pisah = x => String(x || '').split(',').map(v => v.trim()).filter(Boolean), u = pisah(uk), w = pisah(wr);
+  if (!u.length && !w.length) return [];
+  return (w.length ? w : ['']).flatMap(a => (u.length ? u : ['']).map(b => [a, b].filter(Boolean).join(' – ')));
 }
 function formKulakan() {
   const brg = D.produk.filter(p => !pakaiResep(p));
@@ -1207,8 +1304,8 @@ R.utang = () => {
   $('#v-utang').innerHTML = `
     <div class="grid"><div class="kartu"><div class="label">Piutang belum masuk</div><div class="angka masuk">${rp(jml(blm.filter(u => u.jenis === 'piutang'), sisaUtang))}</div></div><div class="kartu"><div class="label">Utang belum dibayar</div><div class="angka keluar">${rp(jml(blm.filter(u => u.jenis === 'utang'), sisaUtang))}</div></div></div>
     <div class="baris" style="margin-bottom:12px"><button class="btn" type="button" data-act="utang-baru" data-j="piutang">+ Orang berutang ke saya</button><button class="btn tipis" type="button" data-act="utang-baru" data-j="utang">+ Saya berutang</button></div>
-    <h2>Piutang</h2>${sorted.filter(([k]) => k.startsWith('piutang')).map(([k, us]) => kartuOrang(k, us)).join('') || '<p class="label">Tidak ada piutang.</p>'}
-    <h2>Utang</h2>${sorted.filter(([k]) => k.startsWith('utang')).map(([k, us]) => kartuOrang(k, us)).join('') || '<p class="label">Tidak ada utang.</p>'}
+    <h2>Piutang</h2>${sorted.filter(([k]) => k.startsWith('piutang')).map(([k, us]) => kartuOrang(k, us)).join('') || `<div class="kartu">${kosongBlok('note', 'Belum ada piutang', 'Piutang tercatat otomatis saat pembeli memilih <b>Bayar nanti</b> di Kasir, atau tambahkan manual di atas.')}</div>`}
+    <h2>Utang</h2>${sorted.filter(([k]) => k.startsWith('utang')).map(([k, us]) => kartuOrang(k, us)).join('') || '<p class="label" style="margin:0 2px 12px">Belum ada. Utang ke pemasok tercatat saat <b>Beli stok</b> dibayar nanti.</p>'}
     <div class="kartu"><h3>Sudah lunas (terbaru)</h3><ul class="daftar">${lunas.map(u => `<li><div class="isi"><b>${esc(u.nama)}</b><span class="label">${u.jenis === 'piutang' ? 'Piutang' : 'Utang'} · ${esc(u.ket || '')}</span></div><span>${rp(u.nominal)}</span><button class="aksi" type="button" data-act="menu-utang" data-id="${u.id}" aria-label="Pilihan">${ic('more')}</button></li>`).join('') || '<li class="kosong">Belum ada.</li>'}</ul></div>`;
 };
 function formUtang(jenis) {
@@ -1330,7 +1427,7 @@ R.laporan = () => {
   const nr = neraca(), pj = pajakUmkm(a1, b, r.omzet);
   const arus = D.dompet.map(d => { let m = 0, k = 0; D.trx.forEach(t => { if (t.tanggal < a1 || t.tanggal > b) return; if (t.jenis === 'masuk' && t.dompet === d.id) m += t.nominal; if (t.jenis === 'keluar' && t.dompet === d.id) k += t.nominal; if (t.jenis === 'pindah') { if (t.dompet === d.id) k += t.nominal; if (t.keDompet === d.id) m += t.nominal; } }); return { d, awal: saldoDompet(d.id, geserTgl(a1, -1)), m, k, akhir: saldoDompet(d.id, b) }; });
   const donat = Object.entries(r.perKatK).sort((x, y) => y[1] - x[1]).slice(0, 9);
-  $('#lapIsi').innerHTML = `
+  $('#lapIsi').innerHTML = (D.trx.length ? '' : `<div class="banner penuh">Laporan terisi otomatis setelah Anda mencatat penjualan dan pengeluaran. Mulai dari menu <b>Kasir</b> atau tombol <b>Uang keluar</b> di Beranda.</div>`) + `
     <div class="kartu penuh"><h3>Ringkasan ${tglIndo(a1)} – ${tglIndo(b)}</h3><p class="label">Dibandingkan ${panjang} hari sebelumnya (${tglIndo(pa)} – ${tglIndo(pb)})</p>
       <div class="grid" style="margin:0">
         <div><div class="label">Pemasukan usaha</div><div class="angka masuk">${rp(r.omzet)}${naikTurun(r.omzet, s.omzet)}</div></div>
@@ -1404,25 +1501,25 @@ R.alat = () => {
   const modalMasuk = jml(D.trx.filter(t => t.kategori === 'Modal masuk'), t => t.nominal) + jml(D.dompet, d => d.saldoAwal || 0);
   const jualan = D.produk.filter(p => p.jenis === 'jual');
   $('#v-alat').innerHTML = `
-    <div class="kartu"><h3>Anggaran bulanan</h3>${angg.length ? angg.map(([k, v]) => { const t = rb_.perKatK[k] || 0, p = Math.round(t / v * 100); return `<div style="margin-bottom:10px"><div class="baris"><span class="isi">${esc(k)}</span><span>${rp(t)} / ${rp(v)}</span></div><div class="bar"><i class="${p > 100 ? 'lewat' : ''}" style="width:${Math.min(100, p)}%"></i></div></div>`; }).join('') : '<p class="label">Batasi pengeluaran per kategori. Aplikasi memberi peringatan di Beranda saat mendekati batas.</p>'}<button class="btn tipis kecil" type="button" data-act="atur-anggaran">Atur anggaran</button></div>
-    <div class="kartu"><h3>Target omzet bulanan</h3><div class="baris"><input id="aTarget" class="uang" inputmode="numeric" value="${D.target ? rb(D.target) : ''}" placeholder="mis. 10.000.000" style="flex:1"><button class="btn kecil" type="button" data-act="simpan-target">Simpan</button></div>${D.target ? `<div class="bar"><i style="width:${Math.min(100, Math.round(rb_.omzet / D.target * 100))}%"></i></div><p class="label">Bulan ini ${rp(rb_.omzet)} (${Math.round(rb_.omzet / D.target * 100)}%). Butuh ±${rp(Math.max(0, D.target - rb_.omzet) / Math.max(1, selisihHari(hariIni(), akhirBln(b)) + 1))}/hari untuk sisa bulan.</p>` : ''}</div>
-    <div class="kartu"><h3>Titik impas (BEP)</h3><p class="label">Berapa yang harus terjual agar tidak rugi.</p>
+    <div class="kartu" data-grup="rencana"><h3>Anggaran bulanan</h3>${angg.length ? angg.map(([k, v]) => { const t = rb_.perKatK[k] || 0, p = Math.round(t / v * 100); return `<div style="margin-bottom:10px"><div class="baris"><span class="isi">${esc(k)}</span><span>${rp(t)} / ${rp(v)}</span></div><div class="bar"><i class="${p > 100 ? 'lewat' : ''}" style="width:${Math.min(100, p)}%"></i></div></div>`; }).join('') : '<p class="label">Batasi pengeluaran per kategori. Aplikasi memberi peringatan di Beranda saat mendekati batas.</p>'}<button class="btn tipis kecil" type="button" data-act="atur-anggaran">Atur anggaran</button></div>
+    <div class="kartu" data-grup="rencana"><h3>Target omzet bulanan</h3><div class="baris"><input id="aTarget" class="uang" inputmode="numeric" value="${D.target ? rb(D.target) : ''}" placeholder="mis. 10.000.000" style="flex:1"><button class="btn kecil" type="button" data-act="simpan-target">Simpan</button></div>${D.target ? `<div class="bar"><i style="width:${Math.min(100, Math.round(rb_.omzet / D.target * 100))}%"></i></div><p class="label">Bulan ini ${rp(rb_.omzet)} (${Math.round(rb_.omzet / D.target * 100)}%). Butuh ±${rp(Math.max(0, D.target - rb_.omzet) / Math.max(1, selisihHari(hariIni(), akhirBln(b)) + 1))}/hari untuk sisa bulan.</p>` : ''}</div>
+    <div class="kartu" data-grup="rencana" data-lanjut><h3>Titik impas (BEP)</h3><p class="label">Berapa yang harus terjual agar tidak rugi.</p>
       <div class="tiga"><div><label>Biaya tetap/bulan</label><input id="bTetap" class="uang" inputmode="numeric" value="${D.bebanTetap ? rb(D.bebanTetap) : ''}" placeholder="sewa+gaji+listrik"></div><div><label>Harga jual/unit</label><input id="bHarga" class="uang" inputmode="numeric"></div><div><label>Biaya variabel/unit</label><input id="bVar" class="uang" inputmode="numeric" placeholder="modal/HPP"></div></div>
       ${jualan.length ? `<label>Atau ambil dari produk</label><select id="bProd"><option value="">—</option>${opsi(jualan.map(p => [p.id, namaProd(p)]))}</select>` : ''}
       <p id="bHasil" class="banner" style="margin-top:10px">Isi tiga kolom di atas.</p></div>
-    <div class="kartu"><h3>Simulasi harga</h3>${jualan.length ? `<p class="label">Apa yang terjadi pada laba bila harga dinaikkan/diturunkan? Dasar: penjualan 30 hari terakhir.</p>
+    <div class="kartu" data-grup="rencana" data-lanjut><h3>Simulasi harga</h3>${jualan.length ? `<p class="label">Apa yang terjadi pada laba bila harga dinaikkan/diturunkan? Dasar: penjualan 30 hari terakhir.</p>
       <label>Produk</label><select id="sProd">${opsi(jualan.map(p => [p.id, namaProd(p)]))}</select>
       <div class="dua"><div><label>Ubah harga (%)</label><input id="sHarga" inputmode="decimal" value="10"></div><div><label>Perkiraan perubahan jumlah terjual (%)</label><input id="sQty" inputmode="decimal" value="-5"></div></div><div id="sHasil" style="margin-top:10px"></div>` : '<p class="label">Tambahkan produk dulu.</p>'}</div>
-    <div class="kartu"><h3>Dana darurat usaha</h3><p class="label">Sisihkan uang di dompet khusus (mis. "Tabungan darurat"), idealnya 3× biaya bulanan (${rp(rb_.biaya * 3)} untuk bulan ini).</p>
+    <div class="kartu" data-grup="uang" data-lanjut><h3>Dana darurat usaha</h3><p class="label">Sisihkan uang di dompet khusus (mis. "Tabungan darurat"), idealnya 3× biaya bulanan (${rp(rb_.biaya * 3)} untuk bulan ini).</p>
       <div class="dua"><div><label>Dompet dana darurat</label><select id="ddDompet"><option value="">—</option>${opsiDompet(dd.dompet)}</select></div><div><label>Target</label><input id="ddTarget" class="uang" inputmode="numeric" value="${dd.target ? rb(dd.target) : ''}"></div></div><p><button class="btn kecil" type="button" data-act="simpan-dd">Simpan</button></p></div>
-    <div class="kartu"><h3>Dompet / rekening</h3><ul class="daftar">${D.dompet.map(d => `<li><div class="isi"><b>${esc(d.nama)}</b><span class="label">saldo awal ${rp(d.saldoAwal)}</span></div><b>${rp(saldoDompet(d.id))}</b><button class="aksi" type="button" data-act="ubah-dompet" data-id="${d.id}" aria-label="Ubah">${ic('edit')}</button></li>`).join('')}</ul>
+    <div class="kartu" data-grup="uang"><h3>Dompet / rekening</h3><ul class="daftar">${D.dompet.map(d => `<li><div class="isi"><b>${esc(d.nama)}</b><span class="label">saldo awal ${rp(d.saldoAwal)}</span></div><b>${rp(saldoDompet(d.id))}</b><button class="aksi" type="button" data-act="ubah-dompet" data-id="${d.id}" aria-label="Ubah">${ic('edit')}</button></li>`).join('')}</ul>
       <div class="baris"><button class="btn tipis kecil" type="button" data-act="ubah-dompet">+ Dompet</button><button class="btn tipis kecil" type="button" data-act="pindah-dana">${ic('swap')}Pindah dana</button></div></div>
-    <div class="kartu"><h3>Modal & gaji pemilik</h3><p>Total modal disetor: <b>${rp(modalMasuk)}</b> <span class="label">(saldo awal + kategori "Modal masuk")</span></p><p class="label">Pisahkan uang usaha dan pribadi: catat gaji untuk diri sendiri sebagai "Gaji pemilik" (biaya tetap), dan ambilan di luar itu sebagai "Ambil pribadi".</p>
+    <div class="kartu" data-grup="uang"><h3>Modal & gaji pemilik</h3><p>Total modal disetor: <b>${rp(modalMasuk)}</b> <span class="label">(saldo awal + kategori "Modal masuk")</span></p><p class="label">Pisahkan uang usaha dan pribadi: catat gaji untuk diri sendiri sebagai "Gaji pemilik" (biaya tetap), dan ambilan di luar itu sebagai "Ambil pribadi".</p>
       <div class="baris"><button class="btn tipis kecil" type="button" data-act="catat-modal">+ Catat modal masuk</button><button class="btn tipis kecil" type="button" data-act="catat-gaji">+ Gaji pemilik</button></div></div>
-    <div class="kartu"><h3>Pelanggan</h3><ul class="daftar">${D.pelanggan.map(p => { const bel = D.nota.filter(n => n.pelanggan === p.id && !n.retur); return `<li><div class="isi"><b>${esc(p.nama)}${p.grosir ? ' <span class="tag">grosir</span>' : ''}</b><span class="label">${esc(p.wa || '')} · ${bel.length} nota · total ${rp(jml(bel, n => n.total))}${p.batasKredit ? ' · batas utang ' + rp(p.batasKredit) : ''}</span></div><button class="aksi" type="button" data-act="riwayat-pel" data-id="${p.id}" aria-label="Riwayat belanja">${ic('receipt')}</button><button class="aksi" type="button" data-act="ubah-pel" data-id="${p.id}" aria-label="Ubah">${ic('edit')}</button></li>`; }).join('') || '<li class="kosong">Belum ada pelanggan.</li>'}</ul><button class="btn tipis kecil" type="button" data-act="ubah-pel">+ Pelanggan</button></div>
-    <div class="kartu"><h3>Pemasok</h3><ul class="daftar">${D.pemasok.map(s => `<li><div class="isi"><b>${esc(s.nama)}</b><span class="label">${esc(s.wa || '')} ${esc(s.alamat || '')}</span></div>${s.wa ? `<a class="aksi" href="https://wa.me/${normWa(s.wa)}" target="_blank" rel="noopener" aria-label="WhatsApp">${ic('chat')}</a>` : ''}<button class="aksi" type="button" data-act="ubah-sup" data-id="${s.id}" aria-label="Ubah">${ic('edit')}</button></li>`).join('') || '<li class="kosong">Belum ada pemasok.</li>'}</ul><button class="btn tipis kecil" type="button" data-act="ubah-sup">+ Pemasok</button></div>
-    <div class="kartu"><h3>Transaksi rutin otomatis</h3><ul class="daftar">${D.berulang.map(b => `<li><div class="isi"><b>${esc(b.tpl.catatan || b.tpl.kategori)}</b><span class="label">tiap tanggal ${b.hari} · ${b.tpl.jenis} · terakhir ${namaBln(b.terakhir)}</span></div><span>${rp(b.tpl.nominal)}</span><button class="aksi" type="button" data-act="hapus-berulang" data-id="${b.id}" aria-label="Hentikan">${ic('x')}</button></li>`).join('') || '<li class="kosong">Belum ada. Centang "Ulangi otomatis tiap bulan" saat mencatat sewa/gaji/cicilan.</li>'}</ul></div>
-    <div class="kartu"><h3>Pengaturan kasir & pajak</h3><div class="dua"><div><label>Pajak default %</label><input id="aPajak" inputmode="decimal" value="${D.pajakDefault || ''}"></div><div><label>Biaya layanan default %</label><input id="aLayan" inputmode="decimal" value="${D.layananDefault || ''}"></div></div>
+    <div class="kartu" data-grup="orang"><h3>Pelanggan</h3><ul class="daftar">${D.pelanggan.map(p => { const bel = D.nota.filter(n => n.pelanggan === p.id && !n.retur); return `<li><div class="isi"><b>${esc(p.nama)}${p.grosir ? ' <span class="tag">grosir</span>' : ''}</b><span class="label">${esc(p.wa || '')} · ${bel.length} nota · total ${rp(jml(bel, n => n.total))}${p.batasKredit ? ' · batas utang ' + rp(p.batasKredit) : ''}</span></div><button class="aksi" type="button" data-act="riwayat-pel" data-id="${p.id}" aria-label="Riwayat belanja">${ic('receipt')}</button><button class="aksi" type="button" data-act="ubah-pel" data-id="${p.id}" aria-label="Ubah">${ic('edit')}</button></li>`; }).join('') || '<li class="kosong">Belum ada pelanggan.</li>'}</ul><button class="btn tipis kecil" type="button" data-act="ubah-pel">+ Pelanggan</button></div>
+    <div class="kartu" data-grup="orang"><h3>Pemasok</h3><ul class="daftar">${D.pemasok.map(s => `<li><div class="isi"><b>${esc(s.nama)}</b><span class="label">${esc(s.wa || '')} ${esc(s.alamat || '')}</span></div>${s.wa ? `<a class="aksi" href="https://wa.me/${normWa(s.wa)}" target="_blank" rel="noopener" aria-label="WhatsApp">${ic('chat')}</a>` : ''}<button class="aksi" type="button" data-act="ubah-sup" data-id="${s.id}" aria-label="Ubah">${ic('edit')}</button></li>`).join('') || '<li class="kosong">Belum ada pemasok.</li>'}</ul><button class="btn tipis kecil" type="button" data-act="ubah-sup">+ Pemasok</button></div>
+    <div class="kartu" data-grup="uang"${D.berulang.length ? '' : ' data-lanjut'}><h3>Transaksi rutin otomatis</h3><ul class="daftar">${D.berulang.map(b => `<li><div class="isi"><b>${esc(b.tpl.catatan || b.tpl.kategori)}</b><span class="label">tiap tanggal ${b.hari} · ${b.tpl.jenis} · terakhir ${namaBln(b.terakhir)}</span></div><span>${rp(b.tpl.nominal)}</span><button class="aksi" type="button" data-act="hapus-berulang" data-id="${b.id}" aria-label="Hentikan">${ic('x')}</button></li>`).join('') || '<li class="kosong">Belum ada. Centang "Ulangi otomatis tiap bulan" saat mencatat sewa/gaji/cicilan.</li>'}</ul></div>
+    <div class="kartu" data-grup="kasir" data-lanjut><h3>Pengaturan kasir & pajak</h3><div class="dua"><div><label>Pajak default %</label><input id="aPajak" inputmode="decimal" value="${D.pajakDefault || ''}"></div><div><label>Biaya layanan default %</label><input id="aLayan" inputmode="decimal" value="${D.layananDefault || ''}"></div></div>
       <label class="cek"><input type="checkbox" id="aBadan" ${D.pajakBadan ? 'checked' : ''}> Usaha berbentuk badan (CV/PT/koperasi) — tanpa batas bebas pajak Rp500 juta</label><button class="btn kecil" type="button" data-act="simpan-pajak">Simpan</button></div>`;
   const bep = () => {
     const t = angka($('#bTetap').value), h = angka($('#bHarga').value), v = angka($('#bVar').value);
@@ -1440,6 +1537,7 @@ R.alat = () => {
     $('#sHasil').innerHTML = qty ? `<table><tr><th></th><th class="r">Sekarang</th><th class="r">Simulasi</th></tr><tr><td>Harga</td><td class="r">${rp(p.harga)}</td><td class="r">${rp(h2)}</td></tr><tr><td>Terjual/30 hari</td><td class="r">${+qty.toFixed(1)}</td><td class="r">${+q2.toFixed(1)}</td></tr><tr><td>Laba kotor/30 hari</td><td class="r">${rp(l1)}</td><td class="r ${l2 >= l1 ? 'masuk' : 'keluar'}"><b>${rp(l2)}</b></td></tr></table><p class="label">${l2 >= l1 ? 'Perubahan ini menambah laba ' : 'Perubahan ini mengurangi laba '}${rp(Math.abs(l2 - l1))}/bulan.</p>` : '<p class="label">Produk ini belum terjual lewat kasir 30 hari terakhir.</p>';
   };
   ['#sProd', '#sHarga', '#sQty'].forEach(s => $(s) && $(s).addEventListener('input', sim)); sim();
+  pasangSub('v-alat', [['uang', 'Dompet & modal'], ['orang', 'Pelanggan & pemasok'], ['rencana', 'Target & anggaran'], ['kasir', 'Kasir & pajak']]);
 };
 function formDompet(d) {
   const baru = !d;
@@ -1470,38 +1568,38 @@ R.atur = async () => {
   const p = D.profil, snap = (await idb.keys('snap').catch(() => [])).sort().reverse();
   const sidikBisa = !!(window.PublicKeyCredential && window.isSecureContext);
   $('#v-atur').innerHTML = `
-    <form class="kartu" id="fProfil"><h3>Profil usaha</h3>
+    <form class="kartu" id="fProfil" data-grup="toko"><h3>Profil usaha</h3>
       <div class="baris" style="align-items:flex-start"><img class="logo-pratinjau" id="logoLihat" alt="Logo" ${p.logo ? `src="${p.logo}"` : 'hidden'}><div class="isi"><label for="logoFile" style="margin-top:0">Logo usaha (opsional)</label><input type="file" id="logoFile" accept="image/*"><div class="baris" style="margin-top:6px"><button type="button" class="btn tipis kecil" data-act="hapus-logo" ${p.logo ? '' : 'hidden'} id="tblHapusLogo">Hapus logo</button></div></div></div>
       <label for="pNama">Nama toko / usaha</label><input id="pNama" value="${esc(p.nama)}" maxlength="60" required>
+      <label for="pJenisU">Jenis usaha</label><select id="pJenisU">${opsi(Object.entries(PRESET).map(([k, v]) => [k, v.label]), D.jenisUsaha)}</select>
       <label for="pAlamat">Alamat</label><input id="pAlamat" value="${esc(p.alamat)}" maxlength="120">
       <label for="pWa">No. WhatsApp usaha</label><input id="pWa" inputmode="tel" value="${esc(p.wa)}">
       <label for="pKaki">Tulisan di bawah nota</label><input id="pKaki" value="${esc(p.kaki)}" maxlength="80">
       <p class="label">Nama dan logo tampil di aplikasi, nota/struk, dan laporan PDF.</p>
       <button class="btn">Simpan profil</button></form>
-    <div class="kartu"><h3>Banyak usaha</h3><p class="label">Punya lebih dari satu usaha? Data tiap usaha terpisah.</p><ul class="daftar">${A.usaha.map(u => `<li><span class="isi"><b>${esc(u.nama)}</b>${u.id === A.aktif ? ' <span class="tag">aktif</span>' : ''}</span>${u.id !== A.aktif ? `<button class="btn tipis kecil" type="button" data-act="pakai-usaha" data-id="${u.id}">Pakai</button><button class="aksi" type="button" data-act="hapus-usaha" data-id="${u.id}" aria-label="Hapus usaha">${ic('x')}</button>` : ''}</li>`).join('')}</ul><button class="btn tipis kecil" type="button" data-act="usaha-baru">+ Usaha baru</button></div>
-    <div class="kartu"><h3>Kategori</h3><label for="kM">Uang masuk (pisahkan koma)</label><textarea id="kM" rows="2">${esc(D.katMasuk.join(', '))}</textarea><label for="kK">Uang keluar (pisahkan koma)</label><textarea id="kK" rows="3">${esc(D.katKeluar.join(', '))}</textarea><p><button class="btn kecil" type="button" data-act="simpan-kat">Simpan kategori</button></p></div>
-    <div class="kartu"><h3>Tampilan</h3><div class="dua"><div><label for="tTema">Tema</label><select id="tTema">${opsi([['terang', 'Terang'], ['gelap', 'Gelap']], A.tema)}</select></div><div><label for="tHuruf">Ukuran huruf</label><select id="tHuruf">${opsi([['normal', 'Normal'], ['besar', 'Besar (mudah dibaca)']], A.huruf)}</select></div></div></div>
-    <div class="kartu"><h3>Keamanan</h3>
+    <div class="kartu" data-grup="data" data-lanjut><h3>Banyak usaha</h3><p class="label">Punya lebih dari satu usaha? Data tiap usaha terpisah.</p><ul class="daftar">${A.usaha.map(u => `<li><span class="isi"><b>${esc(u.nama)}</b>${u.id === A.aktif ? ' <span class="tag">aktif</span>' : ''}</span>${u.id !== A.aktif ? `<button class="btn tipis kecil" type="button" data-act="pakai-usaha" data-id="${u.id}">Pakai</button><button class="aksi" type="button" data-act="hapus-usaha" data-id="${u.id}" aria-label="Hapus usaha">${ic('x')}</button>` : ''}</li>`).join('')}</ul><button class="btn tipis kecil" type="button" data-act="usaha-baru">+ Usaha baru</button></div>
+    <div class="kartu" data-grup="toko"><h3>Kategori</h3><label for="kM">Uang masuk (pisahkan koma)</label><textarea id="kM" rows="2">${esc(D.katMasuk.join(', '))}</textarea><label for="kK">Uang keluar (pisahkan koma)</label><textarea id="kK" rows="3">${esc(D.katKeluar.join(', '))}</textarea><p><button class="btn kecil" type="button" data-act="simpan-kat">Simpan kategori</button></p></div>
+    <div class="kartu" data-grup="tampil"><h3>Tampilan</h3><label class="cek" style="margin-top:0"><input type="checkbox" id="tLanjut" ${A.lanjutan ? 'checked' : ''}> Tampilkan fitur lanjutan <span class="label">(titik impas, simulasi harga, dana darurat, pajak, impor Excel, banyak usaha, resep bahan)</span></label><div class="dua"><div><label for="tTema">Tema</label><select id="tTema">${opsi([['terang', 'Terang'], ['gelap', 'Gelap']], A.tema)}</select></div><div><label for="tHuruf">Ukuran huruf</label><select id="tHuruf">${opsi([['normal', 'Normal'], ['besar', 'Besar (mudah dibaca)']], A.huruf)}</select></div></div></div>
+    <div class="kartu" data-grup="tampil"><h3>Keamanan</h3>
       <p>PIN pemilik: <b>${A.pin ? 'aktif' : 'belum diatur'}</b> <button class="btn tipis kecil" type="button" data-act="atur-pin">${A.pin ? 'Ganti' : 'Atur'} PIN</button> ${A.pin ? '<button class="btn tipis kecil" type="button" data-act="hapus-pin">Hapus PIN</button>' : ''}</p>
       <p>Sidik jari / kunci layar HP: <b>${A.sidik ? 'aktif' : 'belum'}</b> ${sidikBisa ? `<button class="btn tipis kecil" type="button" data-act="${A.sidik ? 'hapus-sidik' : 'daftar-sidik'}">${A.sidik ? 'Matikan' : 'Aktifkan'}</button>` : '<span class="label">(butuh aplikasi dibuka dari situs https)</span>'}</p>
       <p><button class="btn kecil" type="button" data-act="mode-kasir">${ic('users')}Serahkan ke karyawan (mode kasir)</button></p><p class="label">Mode kasir hanya menampilkan Kasir, Catat, dan Riwayat. Untuk keluar perlu PIN pemilik. PIN mencegah orang lain membuka aplikasi di HP ini; data tidak dienkripsi.</p></div>
-    <div class="kartu"><h3>Pengingat</h3><label class="cek"><input type="checkbox" id="tNotif" ${A.notif ? 'checked' : ''}> Ingatkan saya mencatat bila sampai sore belum ada catatan</label><p class="label">Pengingat muncul saat aplikasi dibuka. Pasang aplikasi ke layar HP agar mudah dibuka tiap hari.</p></div>
-    <div class="kartu"><h3>Cadangan & pindah HP</h3><p class="label">Data tersimpan di perangkat ini. Unduh cadangan secara rutin. Aplikasi juga menyimpan salinan harian otomatis (7 hari terakhir) di perangkat ini.</p>
+    <div class="kartu" data-grup="tampil"><h3>Pengingat</h3><label class="cek"><input type="checkbox" id="tNotif" ${A.notif ? 'checked' : ''}> Ingatkan saya mencatat bila sampai sore belum ada catatan</label><p class="label">Pengingat muncul saat aplikasi dibuka. Pasang aplikasi ke layar HP agar mudah dibuka tiap hari.</p></div>
+    <div class="kartu" data-grup="data"><h3>Cadangan & pindah HP</h3><p class="label">Data tersimpan di perangkat ini. Unduh cadangan secara rutin. Aplikasi juga menyimpan salinan harian otomatis (7 hari terakhir) di perangkat ini.</p>
       <div class="baris"><button class="btn tipis kecil" type="button" data-act="unduh-cadangan">${ic('download')}Unduh cadangan</button><button class="btn tipis kecil" type="button" data-act="bagi-cadangan">${ic('share')}Kirim ke Drive / WhatsApp</button>
       <label class="btn tipis kecil" style="margin:0">${ic('upload')}Pulihkan (ganti semua)<input type="file" id="fPulih" accept=".json,application/json" hidden></label>
       <label class="btn tipis kecil" style="margin:0">${ic('swap')}Gabungkan dari HP lain<input type="file" id="fGabung" accept=".json,application/json" hidden></label></div>
       <p class="label" style="margin-top:8px">Pakai di 2 HP: unduh cadangan di HP A → kirim ke HP B → "Gabungkan". Transaksi dari kedua HP disatukan. Sebaiknya kasir hanya di satu HP agar stok tidak bentrok.</p>
       ${snap.length ? `<h3 style="margin-top:10px">Salinan otomatis</h3><ul class="daftar">${snap.map(k => `<li><span class="isi">${tglIndo(k)}</span><button class="btn tipis kecil" type="button" data-act="pulih-snap" data-id="${k}">Pulihkan</button></li>`).join('')}</ul>` : ''}</div>
-    <div class="kartu"><h3>Impor dari Excel</h3><p class="label">Simpan Excel sebagai CSV dengan kolom: <b>Tanggal; Jenis; Kategori; Keterangan; Nominal</b> (Jenis = masuk/keluar; tanggal 2026-11-28 atau 28/11/2026). Nominal negatif dianggap uang keluar.</p><label class="btn tipis kecil" style="margin:0;display:inline-block">Pilih berkas CSV<input type="file" id="fImpor" accept=".csv,text/csv" hidden></label></div>
-    <div class="kartu"><h3>Riwayat perubahan</h3><ul class="daftar">${D.log.slice(-40).reverse().map(l => `<li><span class="isi">${esc(l.aksi)}<br><span class="label">${new Date(l.w).toLocaleString('id-ID')} · ${l.oleh}</span></span></li>`).join('') || '<li class="kosong">Belum ada.</li>'}</ul></div>
-    <div class="kartu"><h3>Panduan</h3><ol style="padding-left:18px;margin:0 0 10px">
-      <li>Isi profil usaha (nama & logo) di atas.</li><li>Tambah dompet (kas, bank, e-wallet) di <b>Lainnya → Alat usaha</b>.</li><li>Tambah produk di <b>Lainnya → Produk</b>. Usaha makanan: tambah bahan baku lalu isi resep supaya HPP terhitung.</li>
-      <li>Jualan lewat menu <b>Kasir</b>, nota bisa dikirim WhatsApp atau dicetak.</li><li>Pengeluaran dicatat lewat tombol <b>Uang keluar</b> di Beranda, atau dengan suara.</li><li>Lihat untung-rugi di menu <b>Laporan</b>. Unduh cadangan tiap minggu.</li></ol>
+    <div class="kartu" data-grup="data" data-lanjut><h3>Impor dari Excel</h3><p class="label">Simpan Excel sebagai CSV dengan kolom: <b>Tanggal; Jenis; Kategori; Keterangan; Nominal</b> (Jenis = masuk/keluar; tanggal 2026-11-28 atau 28/11/2026). Nominal negatif dianggap uang keluar.</p><label class="btn tipis kecil" style="margin:0;display:inline-block">Pilih berkas CSV<input type="file" id="fImpor" accept=".csv,text/csv" hidden></label></div>
+    <div class="kartu" data-grup="data" data-lanjut><h3>Riwayat perubahan</h3><ul class="daftar">${D.log.slice(-40).reverse().map(l => `<li><span class="isi">${esc(l.aksi)}<br><span class="label">${new Date(l.w).toLocaleString('id-ID')} · ${l.oleh}</span></span></li>`).join('') || '<li class="kosong">Belum ada.</li>'}</ul></div>
+    <div class="kartu" data-grup="bantuan">${panduanHTML()}<h3 style="margin-top:18px">Coba-coba dulu</h3><p class="label">Isi contoh data untuk melihat cara kerja aplikasi. Bisa dihapus lagi.</p>
       <div class="baris"><button class="btn tipis kecil" type="button" data-act="isi-contoh">Isi contoh data</button><button class="btn merah kecil" type="button" data-act="hapus-semua">Hapus semua data usaha ini</button></div></div>
-    <p class="label" style="text-align:center">Catat Usaha versi 2 · terdaftar untuk ${esc(A.lisensi ? A.lisensi.email : '-')}</p>`;
+    <p class="label" data-grup="bantuan" style="text-align:center">Catat Usaha versi 2 · terdaftar untuk ${esc(A.lisensi ? A.lisensi.email : '-')}</p>`;
   $('#fProfil').onsubmit = e => {
     e.preventDefault(); const nama = $('#pNama').value.trim(); if (!nama) return pesan('Nama usaha wajib diisi');
     Object.assign(p, { nama, alamat: $('#pAlamat').value.trim(), wa: $('#pWa').value.trim(), kaki: $('#pKaki').value.trim() });
+    terapkanJenis($('#pJenisU').value);
     const u = A.usaha.find(x => x.id === A.aktif); if (u) u.nama = nama; simpanA(); catatLog('Ubah profil usaha'); simpan(); renderKop(); pesan('Profil tersimpan');
   };
   $('#logoFile').onchange = async e => {
@@ -1514,7 +1612,32 @@ R.atur = async () => {
   $('#fPulih').onchange = e => bacaCadangan(e, 'ganti');
   $('#fGabung').onchange = e => bacaCadangan(e, 'gabung');
   $('#fImpor').onchange = imporCsv;
+  $('#tLanjut').onchange = e => { A.lanjutan = e.target.checked; simpanA(); pesan(A.lanjutan ? 'Fitur lanjutan ditampilkan' : 'Fitur lanjutan disembunyikan'); R.atur(); };
+  pasangSub('v-atur', [['toko', 'Toko'], ['bantuan', 'Cara pakai'], ['data', 'Data & cadangan'], ['tampil', 'Tampilan & keamanan']]);
 };
+function panduanHTML() {
+  const pr = preset(), jasa = D.jenisUsaha === 'jasa';
+  const baris = [
+    ['Ada yang beli / bayar jasa', 'Menu <b>Kasir</b> → pilih barang → Simpan'],
+    ['Pembeli bayar nanti (ngutang)', 'Kasir → Pembayaran: <b>Bayar nanti</b>. Tagihan muncul di menu Utang'],
+    ['Reseller beli banyak', 'Kasir → pilih pembeli reseller. Harga grosir keluar sendiri'],
+    ['Jual lewat Shopee / WhatsApp', 'Kasir → buka <b>Diskon, pajak, ongkir, dijual lewat</b>'],
+    ['Bayar ongkir, listrik, plastik, gaji', 'Beranda → <b>Uang keluar</b>'],
+    ['Belanja barang dagangan', 'Lainnya → Produk → <b>Beli stok</b>'],
+    ['Uang masuk selain jualan', 'Beranda → <b>Uang masuk</b>'],
+    ['Ambil uang untuk keperluan rumah', 'Uang keluar → untuk apa: <b>Ambil pribadi</b>'],
+    ['Pindah uang dari laci ke bank', 'Catat → <b>Pindah uang</b>'],
+    ['Ingin tahu untung bulan ini', 'Menu <b>Laporan</b>'],
+    ['Takut data hilang / ganti HP', 'Pengaturan → Data & cadangan → <b>Unduh cadangan</b>']];
+  if (pr.ukuran) baris.splice(6, 0, ['Barang punya banyak ukuran', 'Produk → Tambah barang → <b>Buat sekaligus</b>']);
+  if (D.jenisUsaha === 'makanan') baris.splice(6, 0, ['Ingin tahu modal per porsi', 'Produk → tambah <b>Bahan baku</b>, lalu isi resep di barangnya']);
+  return `<h3>Cara pakai, singkat</h3><p class="label" style="margin-top:0">Sehari-hari cukup 3 tombol ini:</p>
+    ${infoBaris('receipt', 'lime', '<b>Kasir</b>', jasa ? 'Setiap pelanggan bayar. Nota bisa dikirim ke WhatsApp.' : 'Setiap ada yang beli. Stok dan uang tercatat sendiri.')}
+    ${infoBaris('keluar', 'merah', '<b>Uang keluar</b> (di Beranda)', 'Setiap bayar sesuatu untuk usaha.')}
+    ${jasa ? infoBaris('masuk', 'hijau', '<b>Uang masuk</b> (di Beranda)', 'Pemasukan yang tidak lewat kasir.') : infoBaris('truck', '', '<b>Beli stok</b> (di Produk)', 'Setiap belanja barang dagangan. Stok bertambah, modal diperbarui.')}
+    <h3 style="margin-top:18px">Kalau terjadi ini, tekan ini</h3>
+    <table class="situasi">${baris.map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join('')}</table>`;
+}
 function terapkanTampilan() { document.documentElement.dataset.tema = A.tema; document.documentElement.dataset.huruf = A.huruf; }
 
 /* cadangan */
@@ -1635,20 +1758,24 @@ function isiContoh() {
   const kp = P({ nama: 'Keripik Singkong', varian: 'Pedas', harga: 12000, hargaGrosir: 10000, minGrosir: 10, resep, lacak: false });
   const ko = P({ nama: 'Keripik Singkong', varian: 'Original', harga: 10000, hargaGrosir: 8500, minGrosir: 10, resep, lacak: false });
   const kopi = P({ nama: 'Kopi Susu Botol', harga: 15000, modal: 7000, stok: 320, minStok: 12, barcode: '8990000000017' });
-  D.produk.push(sing, myk, pls, kp, ko, kopi);
+  let jual;
+  if (D.jenisUsaha === 'fashion') {
+    const ks = ['S', 'M', 'L', 'XL'].map(u => P({ nama: 'Kaos Polos', varian: 'Hitam – ' + u, harga: 65000, hargaGrosir: 55000, minGrosir: 6, modal: 35000, stok: 260, minStok: 5 }));
+    const gm = P({ nama: 'Gamis Rayon', varian: 'Navy – All size', harga: 185000, hargaGrosir: 165000, minGrosir: 3, modal: 110000, stok: 220, minStok: 3 });
+    D.produk.push(...ks, gm); jual = [ks[1], ks[2], gm];
+  } else { D.produk.push(sing, myk, pls, kp, ko, kopi); jual = [kp, ko, kopi]; }
   const siti = tandai({ id: id(), nama: 'Bu Siti', wa: '081234567890', alamat: 'Jl. Melati 3', grosir: true, batasKredit: 300000 });
   const budi = tandai({ id: id(), nama: 'Pak Budi', wa: '081298765432', alamat: '', grosir: false, batasKredit: 0 });
   D.pelanggan.push(siti, budi); D.pemasok.push(tandai({ id: id(), nama: 'Pasar Induk', wa: '', alamat: 'Pasar Induk Kota' }));
   if (!D.dompet.find(d => d.nama === 'Bank BRI')) D.dompet.push(tandai({ id: 'bri', nama: 'Bank BRI', saldoAwal: 1500000 }));
   D.dompet[0].saldoAwal = D.dompet[0].saldoAwal || 500000;
-  const jual = [kp, ko, kopi];
   for (let d = 60; d >= 0; d--) {
     const tgl = geserTgl(hariIni(), -d), n = 2 + Math.floor(acak() * 5);
     for (let i = 0; i < n; i++) {
       const p = jual[Math.floor(acak() * 3)], qty = 1 + Math.floor(acak() * 4), harga = p.harga;
       buatNota({ rows: [{ p, qty, harga, diskon: 0 }], sub: harga * qty, dn: 0, pajak: 0, layanan: 0, ongkir: 0, total: harga * qty, status: 'lunas', bayar: harga * qty, metode: acak() < .6 ? 'Tunai' : 'QRIS', dompet: acak() < .6 ? 'kas' : 'bri', kanal: acak() < .7 ? 'Toko' : 'WhatsApp', tanggal: tgl, jam: String(8 + Math.floor(acak() * 12)).padStart(2, '0') + ':' + String(Math.floor(acak() * 60)).padStart(2, '0') });
     }
-    if (d % 7 === 3) { D.trx.push(tandai({ id: id(), jenis: 'keluar', nominal: 180000 + Math.round(acak() * 60) * 1000, tanggal: tgl, jam: '07:30', kategori: 'Kulakan / stok', dompet: 'kas', metode: 'Tunai', catatan: 'Belanja singkong & minyak', tag: ['pasar'] })); sing.stok += 30; myk.stok += 5; }
+    if (d % 7 === 3) { D.trx.push(tandai({ id: id(), jenis: 'keluar', nominal: 180000 + Math.round(acak() * 60) * 1000, tanggal: tgl, jam: '07:30', kategori: 'Kulakan / stok', dompet: 'kas', metode: 'Tunai', catatan: D.jenisUsaha === 'fashion' ? 'Kulakan kaos ke konveksi' : 'Belanja singkong & minyak', tag: ['pasar'] })); sing.stok += 30; myk.stok += 5; }
     if (d % 10 === 5) D.trx.push(tandai({ id: id(), jenis: 'keluar', nominal: 50000, tanggal: tgl, jam: '20:00', kategori: 'Iklan', dompet: 'bri', metode: 'Transfer', catatan: 'Iklan Instagram', tag: ['online'] }));
     if (d % 14 === 0) D.trx.push(tandai({ id: id(), jenis: 'keluar', nominal: 300000, tanggal: tgl, jam: '21:00', kategori: 'Ambil pribadi', dompet: 'kas', metode: 'Tunai', catatan: 'Belanja rumah', tag: [] }));
   }
@@ -1669,6 +1796,8 @@ document.addEventListener('click', async e => {
   const i = el.dataset.id, act = el.dataset.act, trx = () => D.trx.find(t => t.id === i), nota = () => D.nota.find(n => n.id === i), utg = () => D.utang.find(u => u.id === i);
   switch (act) {
     case 'lainnya': return bukaLainnya();
+    case 'buka-sub': subAktif['v-' + el.dataset.ke] = el.dataset.sub; if (dlg.open) dlg.close(); return buka(el.dataset.ke);
+    case 'tutup-mulai': D.mulaiTutup = true; simpan(); pesan('Langkah memulai disembunyikan. Cara pakai ada di Pengaturan.'); return R.beranda();
     case 'minggu': mingguGeser += +el.dataset.d; hariPilih = null; return R.beranda();
     case 'pilih-hari': hariPilih = i === hariIni() ? null : i; return R.beranda();
     case 'cepat-masuk': return siapCatat('masuk');
@@ -1775,12 +1904,13 @@ function mintaAktivasi() {
 /* ================= MULAI ================= */
 function sambutan() {
   dialog('Selamat datang di Catat Usaha', `<p>Isi nama toko/usaha Anda. Logo boleh dilewati.</p>
-    <label>Nama toko / usaha</label><input name="nama" required placeholder="mis. Keripik Bu Ani" autofocus maxlength="60">
+    <label>Nama toko / usaha</label><input name="nama" required placeholder="mis. Butik Anisa" autofocus maxlength="60">
+    <label>Jenis usaha</label><div class="pilih-jenis">${Object.entries(PRESET).map(([k, v]) => `<label><input type="radio" name="jenis" value="${k}" ${k === 'lain' ? 'checked' : ''}>${v.label}</label>`).join('')}</div>
     <label>Logo (opsional)</label><input type="file" name="logo" accept="image/*">
     <label class="cek"><input type="checkbox" name="contoh"> Isi contoh data supaya bisa langsung mencoba</label>`, {
     ok: 'Mulai', onOk: fd => {
       const nama = (fd.get('nama') || '').trim(); if (!nama) { pesan('Isi nama usaha dulu'); return false; }
-      D.profil.nama = nama; const u = A.usaha.find(x => x.id === A.aktif); if (u) u.nama = nama; A.baru = false; simpanA(); simpan();
+      D.profil.nama = nama; terapkanJenis(fd.get('jenis')); const u = A.usaha.find(x => x.id === A.aktif); if (u) u.nama = nama; A.baru = false; simpanA(); simpan();
       const f = fd.get('logo'); if (f && f.size) kecilkanGambar(f, 320, 'image/png').then(l => { D.profil.logo = l; simpan(); renderKop(); }).catch(() => { });
       if (fd.get('contoh')) isiContoh(); else buka('beranda');
     }, onTutup: () => { A.baru = false; simpanA(); }
