@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "id.my.mzakom.catat",
+        "sha256_cert_fingerprints": ["62:5E:32:54:64:D1:91:A9:4A:85:DB:44:EB:EC:58:28:C3:AF:68:42:F9:21:E7:DE:7C:A4:CA:AF:B6:DE:63:DD"]
+      }
+    }]
