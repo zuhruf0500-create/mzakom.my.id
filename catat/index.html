@@ -649,7 +649,7 @@ const opsiPel = (p, kosong = 'Umum') => `<option value="">${kosong}</option>` + 
 /* dialog serbaguna */
 const dlg = $('#dlg');
 function dialog(judul, html, { ok = 'Simpan', onOk, onTutup } = {}) {
-  $('#dlgJudul').textContent = judul; $('#dlgIsi').innerHTML = html;
+  $('#dlgJudul').textContent = judul; $('#dlgIsi').oninput = $('#dlgIsi').onchange = null; $('#dlgIsi').innerHTML = html;
   $('#dlgOk').textContent = ok; $('#dlgOk').hidden = !onOk;
   dlg._ok = onOk; dlg._tutup = onTutup; dlg._selesai = false;
   if (!dlg.open) dlg.showModal();

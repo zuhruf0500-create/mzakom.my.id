@@ -1,5 +1,5 @@
 // Simpan berkas aplikasi agar bisa dibuka tanpa internet. Naikkan VERSI tiap ada pembaruan.
-const VERSI = 'catat-usaha-4';
+const VERSI = 'catat-usaha-5';
 const BERKAS = ['./', 'index.html', 'manifest.webmanifest', 'ikon-192.png', 'ikon-512.png', 'jakarta.woff2'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSI).then(c => c.addAll(BERKAS)));
